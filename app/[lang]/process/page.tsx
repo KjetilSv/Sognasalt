@@ -13,7 +13,7 @@ export default function ProcessPage({ params }: { params: { lang: "no" | "en" | 
   return (
     <main>
       <section className="hero">
-        <div>
+        <div className="section card card-light card-pad">
           <h1>{content.process.title}</h1>
           <p>{content.process.note}</p>
         </div>

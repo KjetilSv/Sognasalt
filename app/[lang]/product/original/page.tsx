@@ -21,7 +21,7 @@ export default function ProductOriginalPage({
   return (
     <main>
       <section className="hero">
-        <div>
+        <div className="section card card-light card-pad">
           <Image
             src={withBasePath("/images/product-original.jpg")}
             alt={`Sognasalt ${product.name}`}

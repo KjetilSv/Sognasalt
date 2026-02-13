@@ -15,18 +15,20 @@ export default function HomePage({ params }: { params: { lang: "no" | "en" | "de
 
   return (
     <main>
-      <section className="hero hero-dark card card-dark card-shadow card-pad">
-        <div className="hero-inner">
-          <Image
-            src={withBasePath("/assets/brand/logo-sognasalt-white-1024.png")}
-            alt="Sognasalt"
-            width={720}
-            height={360}
-            className="hero-logo"
-            priority
-          />
-          <p className="tagline">{content.site.tagline}</p>
-          <p>{content.site.shortIntro}</p>
+      <section className="hero">
+        <div className="section card card-dark card-shadow card-pad hero-dark">
+          <div className="hero-inner">
+            <Image
+              src={withBasePath("/assets/brand/logo-sognasalt-white-1024.png")}
+              alt="Sognasalt"
+              width={720}
+              height={360}
+              className="hero-logo"
+              priority
+            />
+            <p className="tagline">{content.site.tagline}</p>
+            <p>{content.site.shortIntro}</p>
+          </div>
         </div>
       </section>
 
