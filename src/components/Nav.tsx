@@ -31,6 +31,7 @@ const NAV_LABELS: Record<string, {
 import Image from "next/image";
 import Link from "next/link";
 import { basePath } from "@/lib/basePath";
+import { withBasePath } from "@/lib/withBasePath";
 
 type Lang = "no" | "en" | "de";
 
@@ -45,7 +46,7 @@ export default function Nav({ lang }: { lang: Lang }) {
         aria-label={t.homeAriaLabel}
       >
         <Image
-          src="/assets/brand/logo-sognasalt-white.png"
+          src={withBasePath("/assets/brand/logo-sognasalt-white.png")}
           alt="Sognasalt"
           width={180}
           height={48}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/withBasePath";
 import { getImagesFromPublicFolder } from "@/lib/getImagesFromPublicFolder";
 
 type ImageGalleryProps = {
@@ -23,7 +24,7 @@ export default function ImageGallery({
       {images.map((image) => (
         <div key={image.src} className="image-tile">
           <Image
-            src={image.src}
+            src={withBasePath(image.src)}
             alt={image.alt}
             width={imageWidth}
             height={imageHeight}

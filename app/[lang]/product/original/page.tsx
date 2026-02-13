@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/withBasePath";
 import { getContent } from "@/content";
 import ImageGallery from "@/components/ImageGallery";
 
@@ -22,7 +23,7 @@ export default function ProductOriginalPage({
       <section className="hero">
         <div>
           <Image
-            src="/assets/brand/logo-sognasalt-white-1024.png"
+            src={withBasePath("/assets/brand/logo-sognasalt-white-1024.png")}
             alt="Sognasalt"
             width={520}
             height={260}

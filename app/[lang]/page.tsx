@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getContent } from "@/content";
+import { withBasePath } from "@/lib/withBasePath";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -17,7 +18,7 @@ export default function HomePage({ params }: { params: { lang: "no" | "en" | "de
       <section className="hero hero-dark card card-dark card-shadow card-pad">
         <div className="hero-inner">
           <Image
-            src="/assets/brand/logo-sognasalt-white-1024.png"
+            src={withBasePath("/assets/brand/logo-sognasalt-white-1024.png")}
             alt="Sognasalt"
             width={720}
             height={360}

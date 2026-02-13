@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Content } from "@/content/types";
+import { withBasePath } from "@/lib/withBasePath";
 
 export default function Footer({ content }: { content: Content }) {
   const links = content.footer.links ?? [];
@@ -8,7 +9,7 @@ export default function Footer({ content }: { content: Content }) {
     <footer className="footer">
       <div className="footer-logo">
         <Image
-          src="/assets/brand/logo-sognasalt-white.png"
+          src={withBasePath("/assets/brand/logo-sognasalt-white.png")}
           alt="Sognasalt"
           width={120}
           height={32}
