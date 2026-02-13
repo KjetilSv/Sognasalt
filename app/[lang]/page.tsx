@@ -31,6 +31,14 @@ export default function HomePage({ params }: { params: { lang: "no" | "en" | "de
       </section>
 
       <section className="section card card-light card-pad">
+        <Image
+          src={withBasePath("/images/product-original.jpg")}
+          alt={`Sognasalt ${product.name}`}
+          width={480}
+          height={480}
+          className="image-fit"
+          style={{ maxWidth: 360, margin: "0 auto 16px", display: "block" }}
+        />
         <h2>{product.name}</h2>
         <p className="subtitle">{product.heroSubtitle}</p>
         <p>{product.description}</p>

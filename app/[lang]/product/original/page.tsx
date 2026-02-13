@@ -23,11 +23,13 @@ export default function ProductOriginalPage({
       <section className="hero">
         <div>
           <Image
-            src={withBasePath("/assets/brand/logo-sognasalt-white-1024.png")}
-            alt="Sognasalt"
-            width={520}
-            height={260}
+            src={withBasePath("/images/product-original.jpg")}
+            alt={`Sognasalt ${product.name}`}
+            width={640}
+            height={640}
             className="hero-logo"
+            style={{ objectFit: "contain" }}
+            priority
           />
           <h1>{product.name}</h1>
           <p className="subtitle">{product.heroSubtitle}</p>
