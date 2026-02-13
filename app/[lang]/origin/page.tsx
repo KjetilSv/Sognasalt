@@ -53,6 +53,10 @@ export default function OriginPage({
       </section>
 
       <section className="section card card-light card-pad">
+        <p>{content.origin.extra}</p>
+      </section>
+
+      <section className="section card card-light card-pad">
         <p>{content.origin.body}</p>
       </section>
     </main>

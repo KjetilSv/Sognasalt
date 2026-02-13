@@ -31,6 +31,16 @@ export default function HomePage({ params }: { params: { lang: "no" | "en" | "de
       </section>
 
       <section className="section card card-light card-pad">
+        <h2>{content.site.aboutTitle}</h2>
+        <p>{content.site.aboutBody}</p>
+        <ul>
+          {content.site.bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="section card card-light card-pad">
         <Image
           src={withBasePath("/images/product-original.jpg")}
           alt={`Sognasalt ${product.name}`}

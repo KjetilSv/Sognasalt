@@ -20,6 +20,10 @@ export default function ProcessPage({ params }: { params: { lang: "no" | "en" | 
       </section>
 
       <section className="section card card-light card-pad">
+        <p>{content.process.intro}</p>
+      </section>
+
+      <section className="section card card-light card-pad">
         <ul className="process-steps">
           {content.process.steps.map((step) => (
             <li key={step.title}>

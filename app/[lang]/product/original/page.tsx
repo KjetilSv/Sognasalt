@@ -57,6 +57,17 @@ export default function ProductOriginalPage({
       <section className="section card card-light card-pad">
         <h2>{product.name}</h2>
         <p>{product.description}</p>
+
+        <h3>{product.usageTitle}</h3>
+        <p>{product.usageBody}</p>
+
+        <h3>{product.tipsTitle}</h3>
+        <ul>
+          {product.tips.map((t) => (
+            <li key={t}>{t}</li>
+          ))}
+        </ul>
+
         <div className="product-meta">
           <div>
             <h3>{content.labels.perfectFor}</h3>
