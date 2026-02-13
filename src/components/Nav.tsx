@@ -30,7 +30,6 @@ const NAV_LABELS: Record<string, {
 
 import Image from "next/image";
 import Link from "next/link";
-import { basePath } from "@/lib/basePath";
 import { withBasePath } from "@/lib/withBasePath";
 
 type Lang = "no" | "en" | "de";
@@ -42,7 +41,7 @@ export default function Nav({ lang }: { lang: Lang }) {
     <nav className="nav">
       <Link
         className="brand"
-        href={`${basePath}/${lang}/`}
+        href={`/${lang}/`}
         aria-label={t.homeAriaLabel}
       >
         <Image
@@ -56,12 +55,10 @@ export default function Nav({ lang }: { lang: Lang }) {
       </Link>
 
       <div className="nav-links">
-        <Link href={`${basePath}/${lang}/`}>{t.home}</Link>
-        <Link href={`${basePath}/${lang}/product/original/`}>
-          {t.products}
-        </Link>
-        <Link href={`${basePath}/${lang}/process/`}>{t.process}</Link>
-        <Link href={`${basePath}/${lang}/origin/`}>{t.origin}</Link>
+        <Link href={`/${lang}/`}>{t.home}</Link>
+        <Link href={`/${lang}/product/original/`}>{t.products}</Link>
+        <Link href={`/${lang}/process/`}>{t.process}</Link>
+        <Link href={`/${lang}/origin/`}>{t.origin}</Link>
       </div>
     </nav>
   );
