@@ -16,7 +16,7 @@ export default function HomePage({ params }: { params: { lang: "no" | "en" | "de
   return (
     <main>
       <section className="hero">
-        <div className="section card card-dark card-shadow card-pad hero-dark">
+        <div className="card card-dark card-shadow card-pad hero-dark"> 
           <div className="hero-inner">
             <Image
               src={withBasePath("/assets/brand/logo-sognasalt-white-1024.png")}
