@@ -19,13 +19,10 @@ export default function OriginPage({
   return (
     <main>
       <section className="hero">
-        <div>
+        <div className="section card card-light card-pad">
           <h1>{content.origin.title}</h1>
+          <p>{content.origin.body}</p>
         </div>
-      </section>
-
-      <section className="section card card-light card-pad">
-        <p>{content.origin.body}</p>
       </section>
 
       <section className="section card card-light card-pad">
