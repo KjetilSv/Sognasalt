@@ -21,8 +21,11 @@ export default function OriginPage({
       <section className="hero">
         <div>
           <h1>{content.origin.title}</h1>
-          <p>{content.origin.body}</p>
         </div>
+      </section>
+
+      <section className="section card card-light card-pad">
+        <p>{content.origin.body}</p>
       </section>
 
       <section className="section card card-light card-pad">
@@ -54,10 +57,6 @@ export default function OriginPage({
 
       <section className="section card card-light card-pad">
         <p>{content.origin.extra}</p>
-      </section>
-
-      <section className="section card card-light card-pad">
-        <p>{content.origin.body}</p>
       </section>
     </main>
   );
